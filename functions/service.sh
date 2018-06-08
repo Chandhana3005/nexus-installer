@@ -14,10 +14,12 @@ setRunAsUser() {
 createServiceFile() {
   setNexusHome
   setRunAsUser
+  
+  serviceFile="/etc/systemd/system/nexus.service"
 
-  sudo touch /etc/systemd/system/nexus.service
-  sudo chmod 777 /etc/systemd/system/nexus.service
-  sudo cp $dir/service.txt /etc/systemd/system/nexus.service
+  sudo touch $serviceFile
+  sudo chmod 777 $serviceFile
+  sudo cp $dir/service.txt $serviceFile
 }
 
 enableService() {
