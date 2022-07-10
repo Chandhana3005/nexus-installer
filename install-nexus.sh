@@ -7,7 +7,7 @@ source $dir/functions/jdk.sh
 source $dir/functions/jenkins.sh
 # source $dir/functions/user.sh
 source $dir/functions/service.sh
-# source $dir/functions/utils.sh
+source $dir/functions/utils.sh
 
 ################################################################################
 # Install JDK 8 using PPA
@@ -37,9 +37,10 @@ extractBinary
 # createServiceFile
 enableService
 startService
+enablefirewallService
 
 ################################################################################
 # Remove downloaded archive and extracted folders
 ################################################################################
 
-cleanup
+showpassword
